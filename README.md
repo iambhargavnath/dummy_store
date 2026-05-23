@@ -1,17 +1,84 @@
-# dummy_store
+# DummyStore Flutter App
 
-This is a Dummy Store App
+A modern Flutter e-commerce demo application built using:
 
-## Getting Started
+- Clean Architecture
+- Feature-First Modularization
+- MVVM + MVI Principles
+- Bloc State Management
+- Dio Networking
+- Drift Offline Database
+- Infinite Scroll Pagination
+- Dependency Injection
+- Offline-First Support
+- Cached Network Images
 
-This project is a starting point for a Flutter application.
+Uses DummyJSON Product API:
 
-A few resources to get you started if this is your first Flutter project:
+https://dummyjson.com/products
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Features
+
+## Product Listing
+- Infinite scrolling
+- Lazy loading pagination
+- Product cards
+- Product images
+- Offline support
+
+## Product Search
+- Online search API
+- Offline fallback search
+- Real-time search
+- Search pagination
+
+## Product Details
+- Product image
+- Description
+- Price
+- Category
+
+## Offline Support
+- Drift SQLite database
+- Automatic caching
+- Offline viewing
+- Offline search fallback
+
+## Image Caching
+- CachedNetworkImage
+- Disk cache support
+- Offline image rendering
+
+---
+
+# Architecture
+
+```text
+lib/
+│
+├── core/
+│   ├── database/
+│   ├── di/
+│   ├── network/
+│   └── router/
+│
+├── features/
+│   └── products/
+│       ├── data/
+│       │   ├── datasources/
+│       │   ├── models/
+│       │   └── repositories/
+│       │
+│       ├── domain/
+│       │   ├── entities/
+│       │   ├── repositories/
+│       │   └── usecases/
+│       │
+│       └── presentation/
+│           ├── bloc/
+│           ├── pages/
+│           └── widgets/
+│
+└── main.dart
